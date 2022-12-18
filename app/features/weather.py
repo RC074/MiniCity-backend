@@ -26,3 +26,5 @@ def get_weather(lat, lng):
 
 if __name__ == '__main__': # for testing purposes
     print(get_weather(43.45011, -79.68292))
+
+

@@ -29,13 +29,13 @@ def index():
     weatherInfo = weather.get_weather(data['lat'], data['lng'])
 
     # covid data
-    covidData = corona.get_covid(province)
+    # covidData = corona.get_covid(country)
 
     # construct the above data into json format and returns it
     res = {
         'tweets': tweetsIDs,
         'weather': weatherInfo,
-        'corona': covidData,
+        # 'corona': covidData,
     }
 
     # returning the data is basically answering the post request
