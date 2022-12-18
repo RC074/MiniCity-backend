@@ -5,7 +5,7 @@ import trend, weather# import the needed modules
 import os # to setup the port of the server
 
 app = Flask(__name__)
-cors = CORS(app)
+# cors = CORS(app)
 
 @app.route('/', methods=['POST']) # the below function will handle any post requests to the server
 def index():
@@ -39,7 +39,7 @@ def index():
     }
 
     # returning the data is basically answering the post request
-    res.headers.add('Access-Control-Allow-Origin', '*')
+    # res.headers.add('Access-Control-Allow-Origin', '*')
     return res
 
 port = int(os.environ.get('PORT', 8080)) # runs on port 8080
