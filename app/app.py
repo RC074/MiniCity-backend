@@ -1,7 +1,7 @@
 # flask framework to setup a server that listens for post requests and respond to them
 from flask import Flask, request
 from flask_cors import CORS # allow http requests
-from features import trend, weather, corona # import the needed modules
+from app import trend, weather# import the needed modules
 import os # to setup the port of the server
 
 app = Flask(__name__)
