@@ -39,6 +39,7 @@ def index():
     }
 
     # returning the data is basically answering the post request
+    res.headers.add('Access-Control-Allow-Origin', '*')
     return res
 
 port = int(os.environ.get('PORT', 8080)) # runs on port 8080
