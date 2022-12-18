@@ -1,7 +1,7 @@
 # flask framework to setup a server that listens for post requests and respond to them
 from flask import Flask, request
 from flask_cors import CORS # allow http requests
-from app import trend, weather# import the needed modules
+import trend, weather# import the needed modules
 import os # to setup the port of the server
 
 app = Flask(__name__)
@@ -41,5 +41,9 @@ def index():
     # returning the data is basically answering the post request
     return res
 
+port = int(os.environ.get('PORT', 8080)) # runs on port 8080
 
+if __name__ == '__main__':
+#     # we want the server to be multi-threaded
+	app.run(threaded=True, host='0.0.0.0', port=port)
 
